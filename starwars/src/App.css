@@ -79,3 +79,19 @@ h1 {
 	justify-content: space-evenly;
 	margin: 40px auto;
 }
+
+button {
+	width: 200px;
+	height: 40px;
+	background-color: black;
+	border: 1px solid  #f9ff09;
+	color: #f9ff09;
+	font-size: 1.8rem;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color:  #f9ff09;
+	color: black;
+	border: 1px solid black;
+}

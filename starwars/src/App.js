@@ -6,13 +6,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      currentPage: 1
     };
   }
 
   componentDidMount() {
     this.getCharacters('https://swapi.co/api/people');
-    this.getCharacters('https://swapi.co/api/people/?page=2');
   }
 
   getCharacters = URL => {
@@ -32,6 +32,12 @@ class App extends Component {
       });
   };
 
+  nextPage = () => {
+    this.setState({ currentPage: 2})
+    this.getCharacters('https://swapi.co/api/people/?page=2');
+    console.log(this.state)
+  }
+
   render() {
     return (
       <div className="App">
@@ -39,6 +45,7 @@ class App extends Component {
         <section className="cards">
           <StarList starwarsChars={this.state.starwarsChars}/>
         </section>
+        <button onClick={this.nextPage}>Next Page</button>
       </div>
     );
   }
