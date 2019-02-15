@@ -12,7 +12,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState( { currentPage: 1})
     this.getCharacters('https://swapi.co/api/people');
   }
 
@@ -34,9 +33,13 @@ class App extends Component {
   };
 
   nextPage = () => {
-    this.setState({ currentPage: 2})
-    this.getCharacters('https://swapi.co/api/people/?page=2');
-    console.log(this.state)
+    this.setState({ currentPage: this.state.currentPage+=1})
+    this.getCharacters(`https://swapi.co/api/people/?page=${this.state.currentPage}`);
+  }
+
+  previousPage = () => {
+    this.setState({ currentPage: this.state.currentPage-=1})
+    this.getCharacters(`https://swapi.co/api/people/?page=${this.state.currentPage}`)
   }
 
   render() {
@@ -46,7 +49,7 @@ class App extends Component {
         <section className="cards">
           <StarList starwarsChars={this.state.starwarsChars}/>
         </section>
-        <button className={`previous${this.state.currentPage === 2 ? 'display' : ''}`} onClick={() => this.componentDidMount()}>Previous Page</button>
+        <button className={`previous${this.state.currentPage >= 2 ? 'display' : ''}`} onClick={this.previousPage}>Previous Page</button>
         <button onClick={this.nextPage}>Next Page</button>
       </div>
     );
