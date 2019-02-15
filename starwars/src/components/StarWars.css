@@ -1,5 +1,24 @@
 .character {
   background-color: white;
-  width: 500px;
-  margin: 0 auto;
+  width: 600px;
+  margin: 40px auto;
+  border-radius: 6px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+justify-content: center;
+}
+
+.character p {
+  width: 100%;
+  font-size: 2rem;
+}
+
+.character h2 {
+  font-size: 3rem;
+}
+
+.character li {
+  width: 100%;
+  font-size: 2rem;
 }
