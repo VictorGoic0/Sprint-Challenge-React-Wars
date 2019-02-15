@@ -100,3 +100,7 @@ button:hover {
 .previous {
 	display: none;
 }
+
+.display {
+	display: flex;
+}
