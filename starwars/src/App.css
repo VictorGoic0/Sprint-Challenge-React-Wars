@@ -71,6 +71,7 @@ h1 {
 .Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
+	margin-bottom: 40px;
 }
 
 .cards {
@@ -84,7 +85,8 @@ button {
 	width: 200px;
 	height: 40px;
 	background-color: black;
-	border: 1px solid  #f9ff09;
+	border: 1px solid #f9ff09;
+	border-radius: 20px;
 	color: #f9ff09;
 	font-size: 1.8rem;
 	margin: 0 20px 20px 20px;
@@ -102,5 +104,9 @@ button:hover {
 }
 
 .display {
-	display: flex;
+	display: inline-block;
+}
+
+.displayprevious {
+	display: none;
 }

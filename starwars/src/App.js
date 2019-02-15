@@ -45,12 +45,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+
         <h1 className="Header">React Wars</h1>
+
+        <button className={`previous${this.state.currentPage >= 2 ? 'display' : ''}`} onClick={this.previousPage}>Previous Page</button>
+        <button className={`display${this.state.currentPage > 8 ? 'previous' : ''}`} onClick={this.nextPage}>Next Page</button>
+
         <section className="cards">
           <StarList starwarsChars={this.state.starwarsChars}/>
         </section>
+
         <button className={`previous${this.state.currentPage >= 2 ? 'display' : ''}`} onClick={this.previousPage}>Previous Page</button>
-        <button onClick={this.nextPage}>Next Page</button>
+        <button className={`display${this.state.currentPage > 8 ? 'previous' : ''}`} onClick={this.nextPage}>Next Page</button>
+
       </div>
     );
   }
