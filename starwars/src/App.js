@@ -45,6 +45,7 @@ class App extends Component {
         <section className="cards">
           <StarList starwarsChars={this.state.starwarsChars}/>
         </section>
+        <button className={`previous${this.state.currentPage ? 2 : ''}`} onClick={() => this.componentDidMount()}>Previous Page</button>
         <button onClick={this.nextPage}>Next Page</button>
       </div>
     );
