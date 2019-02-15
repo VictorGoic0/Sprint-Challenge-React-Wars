@@ -3,12 +3,13 @@
   background-size: cover;
   color: #f9ff09;
   width: 600px;
-  margin: 40px auto;
   border-radius: 6px;
   border: 1px solid #f9ff09;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .character h2 {
