@@ -9,7 +9,7 @@ const StarWars = props => {
       <p>Created: {props.created}</p>
       <p>Eye Color: {props.eye_color}</p>
       <p>Films: {props.films.map(input => (
-        <li>{input}</li>
+        <li className="list">{input}</li>
       ))}</p>
       <p>Gender: {props.gender}</p>
       <p>Hair Color: {props.hair_color}</p>
@@ -19,7 +19,7 @@ const StarWars = props => {
       <p>Skin Color: {props.skin_color}</p>
       <p>Species: {props.species}</p>
       <p>Starships: {props.starships.map(input => (
-        <li>{input}</li>
+        <li className="list">{input}</li>
       ))}</p>
       <p>URL: {props.url}</p>
       <p>Vehicles: {props.vehicles}</p>
